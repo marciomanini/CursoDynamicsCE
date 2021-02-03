@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.271
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curso.AprovacaoDeCredito", "Curso.AprovacaoDeCredito\Curso.AprovacaoDeCredito.csproj", "{D6D254FE-FDD7-4DD6-BBCC-9F4D29A8CB71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Curso.Conta", "Curso.Conta\Curso.Conta.csproj", "{415370FA-56E7-4E65-BBB4-5B997204F8E5}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{D6D254FE-FDD7-4DD6-BBCC-9F4D29A8CB71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6D254FE-FDD7-4DD6-BBCC-9F4D29A8CB71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6D254FE-FDD7-4DD6-BBCC-9F4D29A8CB71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6D254FE-FDD7-4DD6-BBCC-9F4D29A8CB71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{415370FA-56E7-4E65-BBB4-5B997204F8E5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{415370FA-56E7-4E65-BBB4-5B997204F8E5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{415370FA-56E7-4E65-BBB4-5B997204F8E5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{415370FA-56E7-4E65-BBB4-5B997204F8E5}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9FFE26A3-7F19-4EC1-B2B4-04E3CE23F615}
+	EndGlobalSection
+EndGlobal

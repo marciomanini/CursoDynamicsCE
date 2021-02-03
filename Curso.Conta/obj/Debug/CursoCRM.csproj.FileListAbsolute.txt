@@ -1,0 +1,23 @@
+C:\Users\marcio.manini\Desktop\CursoCRM\CursoCRM\bin\Debug\CursoCRM.dll
+C:\Users\marcio.manini\Desktop\CursoCRM\CursoCRM\bin\Debug\CursoCRM.pdb
+C:\Users\marcio.manini\Desktop\CursoCRM\CursoCRM\bin\Debug\Microsoft.Crm.Sdk.Proxy.dll
+C:\Users\marcio.manini\Desktop\CursoCRM\CursoCRM\bin\Debug\Microsoft.Xrm.Sdk.dll
+C:\Users\marcio.manini\Desktop\CursoCRM\CursoCRM\bin\Debug\Microsoft.Crm.Sdk.Proxy.xml
+C:\Users\marcio.manini\Desktop\CursoCRM\CursoCRM\bin\Debug\Microsoft.Xrm.Sdk.xml
+C:\Users\marcio.manini\Desktop\CursoCRM\CursoCRM\obj\Debug\CursoCRM.csproj.CoreCompileInputs.cache
+C:\Users\marcio.manini\Desktop\CursoCRM\CursoCRM\obj\Debug\CursoCRM.csproj.CopyComplete
+C:\Users\marcio.manini\Desktop\CursoCRM\CursoCRM\obj\Debug\CursoCRM.dll
+C:\Users\marcio.manini\Desktop\CursoCRM\CursoCRM\obj\Debug\CursoCRM.pdb
+C:\Users\marcio.manini\OneDrive - Pentare Consultoria em Tecnologia Ltda\Projetos\CursoCRM\CursoCRM\bin\Debug\CursoCRM.dll
+C:\Users\marcio.manini\OneDrive - Pentare Consultoria em Tecnologia Ltda\Projetos\CursoCRM\CursoCRM\bin\Debug\CursoCRM.pdb
+C:\Users\marcio.manini\OneDrive - Pentare Consultoria em Tecnologia Ltda\Projetos\CursoCRM\CursoCRM\bin\Debug\Microsoft.Crm.Sdk.Proxy.dll
+C:\Users\marcio.manini\OneDrive - Pentare Consultoria em Tecnologia Ltda\Projetos\CursoCRM\CursoCRM\bin\Debug\Microsoft.Xrm.Sdk.dll
+C:\Users\marcio.manini\OneDrive - Pentare Consultoria em Tecnologia Ltda\Projetos\CursoCRM\CursoCRM\bin\Debug\Microsoft.Crm.Sdk.Proxy.xml
+C:\Users\marcio.manini\OneDrive - Pentare Consultoria em Tecnologia Ltda\Projetos\CursoCRM\CursoCRM\bin\Debug\Microsoft.Xrm.Sdk.xml
+C:\Users\marcio.manini\OneDrive - Pentare Consultoria em Tecnologia Ltda\Projetos\CursoCRM\CursoCRM\obj\Debug\CursoCRM.csprojAssemblyReference.cache
+C:\Users\marcio.manini\OneDrive - Pentare Consultoria em Tecnologia Ltda\Projetos\CursoCRM\CursoCRM\obj\Debug\CursoCRM.csproj.CoreCompileInputs.cache
+C:\Users\marcio.manini\OneDrive - Pentare Consultoria em Tecnologia Ltda\Projetos\CursoCRM\CursoCRM\obj\Debug\CursoCRM.csproj.CopyComplete
+C:\Users\marcio.manini\OneDrive - Pentare Consultoria em Tecnologia Ltda\Projetos\CursoCRM\CursoCRM\obj\Debug\CursoCRM.dll
+C:\Users\marcio.manini\OneDrive - Pentare Consultoria em Tecnologia Ltda\Projetos\CursoCRM\CursoCRM\obj\Debug\CursoCRM.pdb
+C:\Users\marcio.manini\OneDrive - Pentare Consultoria em Tecnologia Ltda\Projetos\CursoCRM\CursoCRM\bin\Debug\Microsoft.Xrm.Sdk.Workflow.dll
+C:\Users\marcio.manini\OneDrive - Pentare Consultoria em Tecnologia Ltda\Projetos\CursoCRM\CursoCRM\bin\Debug\Microsoft.Xrm.Sdk.Workflow.xml
