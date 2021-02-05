@@ -18,9 +18,9 @@ namespace Curso.Conta.Biblioteca
 
     public enum StepEventStage
     {
-        PreValidation = 10,
-        PreOperation = 20,
-        PostOperation = 40
+        PreValidation = 10,//Nâo preciso dar update
+        PreOperation = 20,//Nâo preciso dar update
+        PostOperation = 40//Preciso dar update - É o único que pode ser assíncrono
     }
 
     public enum StepExecutionMode

@@ -43,6 +43,9 @@ namespace Curso.AprovacaoDeCredito.Biblioteca
                 Status = new OptionSetValue(2)//Razão de Status
             };
 
+            //Tracing.Trace("Passei por aqui");
+
+            //Evitar exceção Object reference not set to an instance of an object
             if (entityContext["curso_statusaprovacaolimite"] == null || ((OptionSetValue)entityContext["curso_statusaprovacaolimite"]).Value == (int)StatusLimite.Pendente)
             {
                 return;
@@ -63,6 +66,7 @@ namespace Curso.AprovacaoDeCredito.Biblioteca
 
             try
             {
+                //Caso ocorra uma exceção em um dos 2 comandos, nenhum é executado
                 Service.Update(contaUpdate);
                 Service.Execute(request);
             }
@@ -72,15 +76,19 @@ namespace Curso.AprovacaoDeCredito.Biblioteca
             }
         }
 
-        internal void ValidarConclusaoTarefa(EntityReference entidade, OptionSetValue status)
+        internal void ValidarConclusaoTarefa(EntityReference entidade, OptionSetValue state)
         {
-            if (status.Value != 1) { return; }
+            if (state.Value != 1) { return; }
 
             Entity tarefa = Service.Retrieve("curso_aprovacaodecredito", entidade.Id, new ColumnSet("curso_statusaprovacaolimite"));
 
+            //Quando a entidade vem de uma busca, Retrieve por exemplo, somente o Contains é necessário, caso o registro não tenha o valor, ele não virá na entidade
             if (!tarefa.Contains("curso_statusaprovacaolimite") || ((OptionSetValue)tarefa["curso_statusaprovacaolimite"]).Value == (int)StatusLimite.Pendente)
             {
-                Tracing.Trace("O Status da aprovação é: " + tarefa.FormattedValues["curso_statusaprovacaolimite"].ToString());
+                //Para evitar exceção The given key was not present in the dictionary
+                string nomeDoState = tarefa.Contains("curso_statusaprovacaolimite") ? tarefa.FormattedValues["curso_statusaprovacaolimite"].ToString() : "nulo";
+
+                Tracing.Trace("O Status da aprovação é: " + nomeDoState);
 
                 throw new InvalidPluginExecutionException("O campo Status Aprovação Limite precisa estar preenchido e diferente de pendente\n");
             }
@@ -88,6 +96,7 @@ namespace Curso.AprovacaoDeCredito.Biblioteca
 
         internal void ValidarCriacao(Entity entityContext)
         {
+            //Sempre desconfie que o campo está nulo
             if (!entityContext.Contains("regardingobjectid") || (entityContext.Contains("regardingobjectid") && entityContext["regardingobjectid"] == null)) { return; }
             if (!entityContext.Contains("curso_limite") || (entityContext.Contains("curso_limite") && entityContext["curso_limite"] == null)) { return; }
 
@@ -95,16 +104,33 @@ namespace Curso.AprovacaoDeCredito.Biblioteca
             query.Criteria.AddCondition("regardingobjectid", ConditionOperator.Equal, ((EntityReference)entityContext["regardingobjectid"]).Id);
             query.Criteria.AddCondition("curso_statusaprovacaolimite", ConditionOperator.Equal, (int)StatusLimite.Aprovado);
             query.Criteria.AddCondition("curso_limite", ConditionOperator.GreaterEqual, ((Money)entityContext["curso_limite"]).Value);
+            //query.Criteria.AddCondition("curso_limite", ConditionOperator.NotNull);
             query.ColumnSet.AddColumn("curso_limite");
             query.ColumnSet.AddColumn("regardingobjectid");
+            query.ColumnSet.AddColumn("subject");
 
             EntityCollection tarefas = Service.RetrieveMultiple(query);
 
-            if (tarefas.Entities.Count > 0)
+            foreach (var tarefa in tarefas.Entities)
             {
-                decimal valorMaior = tarefas.Entities.Where(x => x.Contains("curso_limite")).Max(y => ((Money)y["curso_limite"]).Value);
-                throw new InvalidPluginExecutionException("Já existe uma tarefa de limite de crédito aprovada com valor de R$" + Decimal.Round(valorMaior, 2).ToString() + " para a conta " + ((EntityReference)tarefas.Entities.First()["regardingobjectid"]).Name);
+                tarefa["subject"] = tarefa["subject"] + "-Depreciada";
+                SetStateRequest request = new SetStateRequest
+                {
+                    EntityMoniker = tarefa.ToEntityReference(),
+                    State = new OptionSetValue(0),//Status
+                    Status = new OptionSetValue(1)//Razão de Status
+                };
+
+                Service.Execute(request);
+                Service.Update(tarefa);
             }
+
+            //if (tarefas.Entities.Count > 0)
+            //{
+            //    //decimal valorMaior = tarefas.Entities.Max(y => ((Money)y["curso_limite"]).Value);
+            //    decimal valorMaior = tarefas.Entities.Where(x => x.Contains("curso_limite")).Max(y => ((Money)y["curso_limite"]).Value);
+            //    throw new InvalidPluginExecutionException("Já existe uma tarefa de limite de crédito aprovada com valor de R$" + Decimal.Round(valorMaior, 2).ToString() + " para a conta " + ((EntityReference)tarefas.Entities.First()["regardingobjectid"]).Name);
+            //}
         }
     }
 }

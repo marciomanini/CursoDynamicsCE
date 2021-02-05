@@ -22,7 +22,7 @@ namespace Curso.AprovacaoDeCredito
             #endregion
 
             /*
-             * Desenvolver um Plug-In na alteração para Aprovar/Reprovar a tarefa de Limite
+             * Desenvolver um Plug-In na alteração para Aprovar/Reprovar a tarefa de Limite vai ser encerrada
              * Mensagem de update: Ideal para validar regras e executar ações na própria etidade ou entidades relacionadas
              * Pré-Imagem: Guarda as informações do registro antes da ação, nem todas ações podem ter preimage, alguns exemplos que podem são: update e delete
             */
@@ -61,11 +61,11 @@ namespace Curso.AprovacaoDeCredito
                 if (!context.InputParameters.Contains("State")) { return; }
 
                 EntityReference entidade = (EntityReference)context.InputParameters["EntityMoniker"];
-                OptionSetValue status = (OptionSetValue)context.InputParameters["State"];
+                OptionSetValue state = (OptionSetValue)context.InputParameters["State"];
 
                 if (context.Stage == (int)StepEventStage.PreOperation)
                 {
-                    helper.ValidarConclusaoTarefa(entidade, status);
+                    helper.ValidarConclusaoTarefa(entidade, state);
                 }
             }
 
