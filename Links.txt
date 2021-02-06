@@ -1,0 +1,53 @@
+Git Hub Rodrigo
+https://github.com/LimaRodrigo/Academia.Fev.21
+
+Git Hub Marcio Manini
+https://github.com/marciomanini/CursoDynamicsCE
+
+XRM Toolbox
+https://www.xrmtoolbox.com/
+
+M Query Builder
+https://crmchartguy.com/power-query-builder/
+
+Administrador de Instâncias CDS
+https://admin.powerplatform.microsoft.com/
+
+Power Automate
+https://southamerica.flow.microsoft.com/
+
+JavaScript - Referência documentação MS
+https://docs.microsoft.com/en-us/powerapps/developer/model-driven-apps/clientapi/reference
+
+C# - XRM Core Assemblies
+https://www.nuget.org/packages/Microsoft.CrmSdk.CoreAssemblies/
+
+C# - XRM Workflow (Code Activity)
+https://www.nuget.org/packages/Microsoft.CrmSdk.Workflow/
+
+C# - Plugin Registration
+https://www.nuget.org/packages/Microsoft.CrmSdk.XrmTooling.PluginRegistrationTool/
+
+C# - Detalhamento sobre Estágios de execução
+https://www.thrives.be/dynamics-365-ce/when-to-use-the-pre-validation-stage-in-the-plugin-pipeline/
+
+C# - Detalhamento sobre Images vinculadas ao Step
+https://www.inogic.com/blog/2014/10/using-preentityimage-and-postentityimage-in-workflows/
+
+Power Apps
+https://make.powerapps.com/
+
+Curso Power BI GRATUITO
+https://www.datascienceacademy.com.br/course?courseid=microsoft-power-bi-para-data-science
+
+ADX Studio (Portals)
+https://community.adxstudio.com/products/adxstudio-portals/documentation/end-users-guide/
+
+LinkedIn Marcio Manini
+https://www.linkedin.com/in/marcio-william-manini-3a350089/
+
+LinkedIn Rodrigo
+https://www.linkedin.com/in/rodrigo-lima-ab317775/
+
+Grupo Whatsapp
+https://chat.whatsapp.com/D5pThhOOUgIBffiBqzBO2i
